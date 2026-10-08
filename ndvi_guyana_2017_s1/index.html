@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_56219152a63f31b0b619da431bcadcc4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 50px; left: 50px; width: 400px; z-index: 9999; 
+                background-color: rgba(255, 255, 255, 0.85); padding: 15px; border-radius: 8px; 
+                box-shadow: 0 2px 5px rgba(0,0,0,0.3); font-family: Arial, sans-serif;">
+        <div style="font-weight: bold; text-align: left; margin-bottom: 5px; color: black; font-size: 14px;">
+            NDVI Index
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">-1.0</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">-0.8</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">-0.6</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">-0.4</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">-0.2</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">0.0</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">0.2</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">0.4</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">0.6</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">0.8</span><span style="flex: 1; font-weight: bold; text-align: center; color: black; font-size: 11px;">1.0</span>
+        </div>
+        <div style="display: flex; margin-bottom: 15px;">
+            <div style="flex: 1; height: 15px; background-color: #800000;"></div><div style="flex: 1; height: 15px; background-color: #a52a2a;"></div><div style="flex: 1; height: 15px; background-color: #d2691e;"></div><div style="flex: 1; height: 15px; background-color: #ff8c00;"></div><div style="flex: 1; height: 15px; background-color: #ffd700;"></div><div style="flex: 1; height: 15px; background-color: #9acd32;"></div><div style="flex: 1; height: 15px; background-color: #32cd32;"></div><div style="flex: 1; height: 15px; background-color: #228b22;"></div><div style="flex: 1; height: 15px; background-color: #006400;"></div><div style="flex: 1; height: 15px; background-color: #004b23;"></div><div style="flex: 1; height: 15px; background-color: #002400;"></div>
+        </div>
+        <div style="font-size: 14px; color: black; font-weight: bold; text-align: center;">
+            Guyana | 2017 | 1er semester (Jan - Jun)
+        </div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_56219152a63f31b0b619da431bcadcc4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_56219152a63f31b0b619da431bcadcc4 = L.map(
+                "map_56219152a63f31b0b619da431bcadcc4",
+                {
+                    center: [4.782974139864346, -58.97349900698443],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8b4e03793badd57d363e73fc26754f48 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8b4e03793badd57d363e73fc26754f48.addTo(map_56219152a63f31b0b619da431bcadcc4);
+        
+    
+            var tile_layer_e5fca1541147b4ff81cbda1746f4027d = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/iica-cimag/maps/a10ee39e429313ef716545f8742481b5-8355b4e8310ef2a6d7cbdb4bc13055ae/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e5fca1541147b4ff81cbda1746f4027d.addTo(map_56219152a63f31b0b619da431bcadcc4);
+        
+</script>
+</html>
