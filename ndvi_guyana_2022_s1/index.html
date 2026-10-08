@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9ceb257fb9fcd9ac5f2fb0643e20813b {
+                #map_4a52877c3edcc973fd0158dd74f28fbe {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -72,14 +72,14 @@
     </div>
     
     
-            <div class="folium-map" id="map_9ceb257fb9fcd9ac5f2fb0643e20813b" ></div>
+            <div class="folium-map" id="map_4a52877c3edcc973fd0158dd74f28fbe" ></div>
         
 </body>
 <script>
     
     
-            var map_9ceb257fb9fcd9ac5f2fb0643e20813b = L.map(
-                "map_9ceb257fb9fcd9ac5f2fb0643e20813b",
+            var map_4a52877c3edcc973fd0158dd74f28fbe = L.map(
+                "map_4a52877c3edcc973fd0158dd74f28fbe",
                 {
                     center: [4.7829741398643355, -58.97349900698449],
                     crs: L.CRS.EPSG3857,
@@ -96,15 +96,15 @@
 
         
     
-            var tile_layer_f74d29ea7cdd11017149a5bc7acf0306 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+            var tile_layer_426a05b43619090651fd8dac23275eec = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOSM\u003c/a\u003e contributors \u0026copy; CARTO",
+  "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -113,11 +113,11 @@
             );
         
     
-            tile_layer_f74d29ea7cdd11017149a5bc7acf0306.addTo(map_9ceb257fb9fcd9ac5f2fb0643e20813b);
+            tile_layer_426a05b43619090651fd8dac23275eec.addTo(map_4a52877c3edcc973fd0158dd74f28fbe);
         
     
-            var tile_layer_2c2316d2f1cb79d8f80ae74445af6779 = L.tileLayer(
-                "https://earthengine.googleapis.com/v1/projects/iica-cimag/maps/5c5d07765bca2d8653f592ce51b8146b-dfa9c160fa424fcb335eb399364507ce/tiles/{z}/{x}/{y}",
+            var tile_layer_200389abc1f1a1631381ff8e53e0ab3a = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/iica-cimag/maps/f4aa4a18273b0ea1a5878d754c6d4615-42af0af7ad654ee5199121bc0ea2648a/tiles/{z}/{x}/{y}",
                 {
   "minZoom": 0,
   "maxZoom": 18,
@@ -133,7 +133,27 @@
             );
         
     
-            tile_layer_2c2316d2f1cb79d8f80ae74445af6779.addTo(map_9ceb257fb9fcd9ac5f2fb0643e20813b);
+            tile_layer_200389abc1f1a1631381ff8e53e0ab3a.addTo(map_4a52877c3edcc973fd0158dd74f28fbe);
+        
+    
+            var tile_layer_af963d8a280e7ba7510eb2bf0b7520bf = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_af963d8a280e7ba7510eb2bf0b7520bf.addTo(map_4a52877c3edcc973fd0158dd74f28fbe);
         
 </script>
 </html>
